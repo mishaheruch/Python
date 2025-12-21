@@ -10,7 +10,7 @@ def debug_test():
 
 def another_function():
     a = 15
-    b = 40
+    b = 50
     c = a * b
     
     print("The value of a is:", a)
