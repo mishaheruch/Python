@@ -33,3 +33,49 @@ def cast_to_float(value):
 _Потім її можна використовувати ось так:_
 
 `float_value = cast_to_float(string_value)`
+
+
+День. 03
+range() дає йому числа, а for просто перебирає їх.
+[5, 6, 7, 8, 9]
+list(range(0, 10, 3))
+старт → 0
+крок → +3
+зупинка перед 10
+0 → 3 → 6 → 9
+list(range(-10, -100, -30))
+початок → -10
+крок → -30 (рухаємось назад!)
+зупинка перед -100
+-10 → -40 → -70
+for i, value in enumerate(a):
+    print(i, value)
+автоматично дає індекс
+і елемент
+без len() і без a[i]
+number = 0
+while number < 10:
+    print(f"Числом є {number}!")
+    number = number + 1
+while означає:
+“ПОВТОРЮЙ, ПОКИ умова істинна”
+number = 0. Початкове значення змінної. 
+while number < 10:  Цикл працює, поки number менше 10
+number = number + 1
+Без цього рядка цикл був би нескінченним ♾️
+number = 0 → друк → +1
+number = 1 → друк → +1
+...
+number = 9 → друк → +1
+number = 10 → СТОП (умова false)
+Числом є 0!
+...
+Числом є 9!
+break = «далі не перевіряй, виходимо з циклу»
+continue не зупиняє цикл, а просто переходить до наступної ітерації.
+for num in range(2, 10):
+    if num % 2 == 0:
+        print(f"Found an even number {num}")
+        continue
+    print(f"Found an odd number {num}")
+pass = “тут має бути код, але поки нічого”
