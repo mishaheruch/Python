@@ -1,11 +1,16 @@
 def sum (): 
     x = input("Please enter an integer: ")
-    x = x.split(" ")  #розбиваємо строку на елементи списку по пробілу
-    x = [float(i) for i in x]  #перетворюємо елементи списку в цілі числа
-    for i in x:  
-        x = float(i)
-        x = x + i
-    return x
-    print (x) 
+    y = x.split(" ")  
+    for i in y: #проверяем на число 
+        if not i.isdigit():
+            print("ПОМИЛКА")
+            return
 
-sum () # Hома не смійся це лише на броски завтра буду думати як правильно зробити кращене скидуй той урок доку цей не до роблю мають завтра кардінально його перероблю ну це лише проба 
+    x = 0 
+    for i in y:  
+         x = x + float(i) 
+         
+    print (x) 
+    
+
+sum () 
