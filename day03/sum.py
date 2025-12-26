@@ -1,17 +1,16 @@
 def sum (): 
-    dodat = input("Please enter an integer: ")
-    sum = dodat.split(" ")  
-    for i in sum: #проверяем на числої
-        for ch in i:
-            if ch not in "0123456789-.":
+    numbers = input("Please enter an integer: ")
+    numbers_list = numbers.split(" ")  
+    for number in numbers_list:
+        for char in number:
+            if char not in "0123456789-.": # супер!-
                 print ("Error: invalid input")
                 return
 
-    dodat = 0 
-    for i in sum:  
-         dodat = dodat + float(i) 
+    sum = 0 
+    for number in numbers_list:  
+         sum += float(number) 
          
-    print (dodat) 
-
+    print (sum) 
 
 sum () 
