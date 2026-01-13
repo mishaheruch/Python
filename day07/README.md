@@ -16,11 +16,13 @@
 
 ### Приклад використання:
 
-```schedule_cli.py add 10:30 Biology
+```
+schedule_cli.py add 10:30 Biology
 Урок 1 успішно додадно: Biology, час 10:30
 ```
 
-```schedule_cli.py list
+```
+schedule_cli.py list
 Розклад уроків на завтра (усього 2 урока)
 Урок 1 – Biology, час 10:30
 Урок 2 – Math, час 12:30
