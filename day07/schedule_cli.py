@@ -1,4 +1,5 @@
 import sys
+import os
 import json
 from pathlib import Path
 
@@ -7,6 +8,10 @@ FILE = "schedule.json"
 
 def load_schedule():
     if not Path(FILE).exists():
+        return []
+
+    if not os.access(FILE, os.W_OK):
+        print(f"Файл {FILE} недоступний для запису.")
         return []
 
     with open(FILE, "r", encoding="utf-8") as f:
@@ -18,6 +23,9 @@ def save_schedule(schedule):
         
 def add_lesson(time, title):
     schedule = load_schedule()
+    if not schedule:
+        return 
+    
     lesson = {
         "time": time,
         "title": title
